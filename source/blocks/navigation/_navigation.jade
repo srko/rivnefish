@@ -1,0 +1,33 @@
+#navigation.navigation
+  .container
+    nav.navbar.navbar-expand-lg.navbar-dark.navbar-custom
+      a.navbar-brand(href='index.html').logo
+        img(src="./images/logo.png", alt="").logo__image
+        .logo__text Rivnefish
+      button.navbar-toggler(
+        type='button', 
+        data-toggle='collapse', 
+        data-target='#navbarNav', 
+        aria-controls='#navbarNav', 
+        aria-expanded='false', 
+        aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarNav.collapse.navbar-collapse
+        ul.navbar-nav.nav-custom
+          li.nav-item.active.nav-custom__item
+            a.nav-link(href='pond.html').nav-custom__link
+              | Мапа 
+              span.sr-only (current)
+          li.nav-item.nav-custom__item
+            a.nav-link(href='reports.html').nav-custom__link Звіти
+          li.nav-item.nav-custom__item
+            a.nav-link(href='report.html').nav-custom__link Водойми
+        .form-inline
+          button.btn.add-waterbody
+            img(src="./images/add-waterbody-icon.png", alt="").add-waterbody__icon.d-none.d-sm-block
+            .add-waterbody__text Додати водойму
+          button.btn.add-report
+            img(src="./images/add-report-icon.png", alt="").add-report__icon.d-none.d-sm-block
+            .add-report__text Додати звіт
+          button.btn.align-middle.login
+            img(src="./images/login-icon.png", alt="").login__icon

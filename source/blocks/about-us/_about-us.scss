@@ -1,0 +1,59 @@
+.about-us {
+  background-color: #f9fafb;
+  padding: 60px 0 100px 0;
+
+  @include breakpoint(md) {
+    padding-bottom: 30px;  
+  }
+
+  &__icon {
+    width: 32px;
+    height: 48px;
+    display:block;
+    margin:auto;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-family: $open-sans;
+    color: rgb(74, 74, 74);
+    text-transform: uppercase;
+    line-height: 2.778;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 17px;
+    font-family: $open-sans;
+    color: rgb(142, 142, 142);
+    line-height: 2.059;
+    text-align: left;
+
+    @include breakpoint(xxs) {
+      font-size: 16px;
+      line-height: 1.8;
+      
+    }
+
+  }
+
+  &__image {
+    border-radius: 50%;
+
+    @include breakpoint(md) {
+      // padding-bottom: 50px;  
+      margin: 20px 0;
+    }
+
+    @include breakpoint(xs) {
+      // padding-bottom: 50px;  
+      // margin: 20px 0; 
+      border-radius: 0;
+      width: 100%; 
+      // padding: -15px;
+      margin: 20 -15px;
+      max-width: 575px; 
+    }
+    
+  }
+}

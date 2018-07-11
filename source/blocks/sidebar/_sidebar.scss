@@ -1,0 +1,222 @@
+.sidebar {
+    margin-top: 40px;
+
+    &__title {
+        font-size: 24px;
+        font-family: $open-sans;
+        color: rgb(48, 52, 79);
+        text-transform: uppercase;
+        line-height: 1.75; 
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #f4f6f8;
+        // width: 360px;
+        // height: 52px;
+
+        @include breakpoint(md) {
+            font-size: 20px;
+        }
+
+        
+    }
+    &__item {
+        display: inline-block;
+        margin: 10px 0;
+        text-decoration: none !important;
+
+        &:hover {
+            .sidebar__item-title,
+            .sidebar__item-date { 
+                color: rgb(143, 216, 59);
+                border-bottom: 1px solid rgba(143, 216, 59, 0.25);
+                text-decoration: none;
+                transition: all ease-in-out 0.3s;
+            }
+            .sidebar__item-image {
+                transition: all ease-in-out 0.3s;
+            }
+        }
+    }
+    &__item-title {
+        font-size: 24px;
+        font-family: $open-sans;
+        color: rgb(74, 74, 74);
+        line-height: 1.75;
+        text-align: left;
+        display: inline-block;
+        border-bottom: 1px solid rgba(143, 216, 59, 0);
+        transition: all ease-in-out 0.5s;
+        @include breakpoint(md) {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
+    &__item-image {
+        border-radius: 5px;
+        background-color: rgb(121, 140, 172);
+        max-width: 360px;
+        max-height: 270px;
+        width: 100%; 
+        transition: all ease-in-out 0.5s;
+    }
+    &__item-date {
+        font-size: 16px;
+        font-family: $open-sans;
+        font-weight: 600;
+        color: rgb(150, 150, 150);
+        line-height: 2.625;
+        text-align: left;
+        margin-top: 10px;
+        display: inline-block;
+        border-bottom: 1px solid rgba(143, 216, 59, 0);
+        transition: all ease-in-out 0.5s;
+
+        @include breakpoint(md) {
+            margin-top: 5px;
+        }
+        
+        &::before {
+            content: url(../images/sidebar-date-icon.png);
+            margin-right: 10px;
+            position: relative;
+            top: 3px;
+        }
+    }
+    &__item-more {
+        margin-bottom: 50px;
+        @include breakpoint(md) {
+            margin-bottom: 25px;
+        }
+    }
+    &__item-more-link {
+        font-size: 16px;
+        font-family: $open-sans;
+        color: rgb(140, 192, 82) !important;
+        line-height: 2.625;
+        text-align: left;
+        &::after {
+            content: url(../images/sidebar-more-icon.png);
+            margin-left: 5px;
+            width: 26px;
+            height: 16px;
+            position: relative;
+            top: 3px;
+        }
+        &:hover {
+            color: rgb(143, 216, 59);
+            border-bottom: 1px solid rgba(143, 216, 59, 0.25);
+            text-decoration: none;
+            padding-bottom: 0px;
+            transition: all ease-in-out 0.3s;
+            margin-bottom: 49px;
+        }
+    }
+    &__ad {
+        margin-bottom: 50px;
+        max-width: 100%;
+
+        @include breakpoint(md) {
+            margin-bottom: 25px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+    &__mail {
+        margin-bottom: 50px;
+        @include breakpoint(md) {
+            margin-bottom: 25px;
+        }
+        &::before {
+            content: url(../images/sidebar-mail-icon.png);
+            position: relative;
+            bottom: -15px;
+            left: calc(50% - 70px);
+            display:inline-block;
+
+            @include breakpoint(md) {
+                transform: scale(.7);
+                bottom: -30px;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__mail-form-group {
+        padding: 20px;
+        background: #f9fafb;
+        border-radius: 3px;
+    }
+    &__mail-input {
+        font-size: 18px;
+        font-family: $open-sans;
+        color: red;
+        line-height: 2.333;
+        text-align: left;
+        border-width: 1px;
+        border-color: rgb(235, 235, 235);
+        border-style: solid;
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255); 
+        max-width: 322px;
+        height: 45px; 
+        &::-webkit-input-placeholder {
+            color: rgba(150, 150, 150, 0.57);
+            font-size: 18px;
+            font-family: $open-sans;
+            font-weight: 100;
+
+            @include breakpoint(md) {
+                font-size: 15px;
+            }
+        }
+        &:focus {
+            background: #ffe;
+            /* Цвет фона */
+            border: 1px solid rgba(143, 216, 59, 1);
+            /* Параметры рамки */
+            outline: none;
+            box-shadow: none;
+            // box-shadow: 0 0 25px rgba(143, 216, 59, 0.15);
+        }
+    }
+    &__mail-button {
+        font-size: 16px;
+        font-family: $open-sans;
+        color: rgb(255, 254, 254);
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 0px 1px 0px rgba(30, 34, 58, 0.19);
+        border-radius: 3px;
+        border: none;
+        background-color: rgb(140, 192, 82); 
+        padding: 18px 25px;
+        outline: none;
+        cursor: pointer;
+        justify-content:center;
+
+        @include breakpoint(md) {
+            font-size: 13px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: rgba(143, 216, 59, 1) !important;
+            box-shadow: none !important;
+        }
+    }
+
+    @include breakpoint(sm) {
+        display: none;
+    }
+}

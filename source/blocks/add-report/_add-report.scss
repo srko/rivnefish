@@ -1,0 +1,54 @@
+.add-report {
+  display: flex;
+  flex-direction: row;
+  background: none;
+
+  align-items: center;
+  justify-content: center;
+
+  border-width: 2px;
+  border-color: rgba(140, 192, 82, 0.5);
+  border-style: solid;
+  border-radius: 3px;
+  padding: 12.5px 17px;
+  transition: border 0.5s ease-in;
+  // margin-right: 40px;
+
+  &:hover {
+    border-color: rgb(140, 192, 82);
+    cursor: pointer;
+    transition: border 0.3s ease-out;
+  }
+
+  &__icon {
+    margin: 0 15px 0 0;
+
+    @include breakpoint(lg) {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    font-family: $open-sans;
+    color: rgb(140, 192, 82);
+    text-align: center;
+    text-shadow: 0px 1px 0px rgba(30, 34, 58, 0.19);
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+    @include breakpoint(md) {
+      display: inline;
+    }
+  }
+
+  @include breakpoint(lg) {
+    margin: 0 10px;
+  } 
+
+  @include breakpoint(xxs) {
+    margin-right: 0; 
+    margin-bottom: 20px;
+  }
+} 

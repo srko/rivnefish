@@ -1,0 +1,38 @@
+.breadcrumb-block {
+    background: #f9fafb;
+    border-top: 2px solid rgb(255, 180, 0);
+}
+
+.breadcrumb-custom {
+    background: #f9fafb;
+    padding: 9px 0;
+    margin-bottom: 0;
+    &__item {
+        &:not(:first-child):before {
+            content: "→";
+            font-size: 12px;
+            color: #bebebe;
+            vertical-align: 5%;
+        }
+        font-size: 16px;
+        font-family: $open-sans;
+        color: rgb(150, 150, 150);
+        line-height: 2.625;
+        text-align: left;
+        &--active {
+            color: #ffb400 !important;
+            font-weight: 600;
+        }
+    }
+    &__link {
+        color: inherit;
+        transition: all 0.5s ease-in;
+        border-bottom: 1px solid rgba(255, 180, 0, 0);
+        &:hover {
+            color: rgba(99, 99, 99, 1);
+            border-bottom: 1px solid rgba(99, 99, 99, 0.5);
+            text-decoration: none;
+            transition: all 0.3s ease-out; 
+        }
+    }
+}

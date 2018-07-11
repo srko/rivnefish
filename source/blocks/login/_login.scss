@@ -1,0 +1,16 @@
+.login {
+  background: none;
+  padding: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__icon {
+  }
+
+  @include breakpoint(xxs) { 
+    margin-right: 0; 
+    margin-bottom: 10px;
+  }
+}

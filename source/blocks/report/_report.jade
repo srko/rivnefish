@@ -1,0 +1,106 @@
+.report
+  .row.justify-content-between
+    .col-12.col-md-8.col-lg-9
+      a(href="").report__date 12.10.1987
+      .report__separator
+      a(href="").report__name Петро Порошенко
+    .col-3.d-none.d-md-block.col-md-4.col-lg-3
+      a(href="").report__comments 14 коментарів
+  .row
+    .col
+      h1.report__title Горинь, с.Олександрія
+    .w-100
+    .col
+      img(src="./images/report-main-image.jpg", alt="").report__main-image
+    .w-100
+    .col
+      .report__data
+          .report__data-row
+            .report__data-cell-title Умовна назва 1
+            .report__data-cell Гліб Гончар, Василь Українець, Максим Хмельницький
+          .report__data-row
+            .report__data-cell-title Умовна назва 1
+            .report__data-cell Гліб Гончар, Василь Українець, Максим Хмельницький
+          .report__data-row
+            .report__data-cell-title Умовна назва 1
+            .report__data-cell Гліб Гончар, Василь Українець, Максим Хмельницький
+          .report__data-row
+            .report__data-cell-title Умовна назва 1
+            .report__data-cell Гліб Гончар, Василь Українець, Максим Хмельницький
+          .report__data-row
+            .report__data-cell-title Умовна назва 1
+            .report__data-cell.report__data-cell--point Українець, Максим Хмельницький
+    .w-100
+    .col
+      .report__fish-slider
+        h3.report__fish-slider-title Спіймана риба
+        .container.text-center.my-3
+          .row.mx-auto.my-auto.align-items-center.justify-content-center
+            #recipeCarousel.carousel.slide.w-100(data-ride='carousel')
+              .carousel-inner.w-100(role='listbox')
+                .carousel-item.active
+                  img.d-block.col-3.img-fluid(src='./images/fish-1.png' data-toggle="tooltip" data-placement="top" title="<b>Йорш</b><br>5шт / 897гр<br>на мормишку")
+                .carousel-item
+                  img.d-block.col-3.img-fluid(src='./images/fish-2.png' data-toggle="tooltip" data-placement="top" title="<b>Йорш</b><br>5шт / 897гр<br>на мормишку")
+                .carousel-item
+                  img.d-block.col-3.img-fluid(src='./images/fish-3.png' data-toggle="tooltip" data-placement="top" title="<b>Йорш</b><br>5шт / 897гр<br>на мормишку")
+                .carousel-item
+                  img.d-block.col-3.img-fluid(src='./images/fish-1.png' data-toggle="tooltip" data-placement="top" title="<b>Йорш</b><br>5шт / 897гр<br>на мормишку")
+                .carousel-item
+                  img.d-block.col-3.img-fluid(src='./images/fish-2.png' data-toggle="tooltip" data-placement="top" title="<b>Йорш</b><br>5шт / 897гр<br>на мормишку")
+                .carousel-item
+                  img.d-block.col-3.img-fluid(src='./images/fish-3.png' data-toggle="tooltip" data-placement="top" title="<b>Йорш</b><br>5шт / 897гр<br>на мормишку")
+              a.carousel-control-prev(href='#recipeCarousel', role='button', data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+              a.carousel-control-next(href='#recipeCarousel', role='button', data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+
+    .w-100
+    .col
+      .report__trophy
+        h3.report__trophy-title Трофей
+        .report__trophy-images
+          img(src="./images/trophy.png", alt="").report__trophy-image
+    .w-100
+    .col
+      .report__text
+        h3.report__text-title Хочу коротко розповісти про дану водойму
+        .report__text-text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi labore possimus, officia saepe, ullam reiciendis, ipsum porro tempore nemo nobis similique accusantium distinctio sapiente beatae? Autem aliquid mollitia consequuntur eligendi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim atque dolores delectus ullam natus architecto maxime sequi. Omnis aliquam qui facilis reiciendis autem distinctio ratione quaerat harum, voluptates cupiditate fugit.
+    .w-100
+    .col
+      .report__gallery
+        .report__gallery-title Усі фото
+        .gallery
+          a(href='./images/gallery-image.jpg', data-caption='Image caption')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+          a(href='./images/gallery-image.jpg')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+          a(href='./images/gallery-image.jpg', data-caption='Image caption')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+          a(href='./images/gallery-image.jpg')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+          a(href='./images/gallery-image.jpg', data-caption='Image caption')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+          a(href='./images/gallery-image.jpg')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+          a(href='./images/gallery-image.jpg', data-caption='Image caption')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+          a(href='./images/gallery-image.jpg')
+            img(src='./images/gallery-thumbnail.jpg', alt='First image')
+
+    .w-100
+    .col
+      .row.align-items-center.justify-content-end
+        .col-12.col-md-9.report__rating 
+          h4.report__rating-title Оцінити звіт
+          .report__rating-thumbs-up
+            .report__rating-thumbs-up-icon
+            button.report__rating-thumbs-up-button 327
+          .report__rating-thumbs-down
+            .report__rating-thumbs-down-icon
+            .report__rating-thumbs-down-button 13
+    .w-100
+    .col
+      include ../comments/_comments.jade

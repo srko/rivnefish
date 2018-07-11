@@ -1,0 +1,34 @@
+.container
+  .row.align-items-center.justify-content-center
+    .col-12.col-md-4
+      #pagination-block.pagination-block
+        nav(aria-label='...')
+          ul.pagination.justify-content-center.pagination-custom
+            li.page-item.disabled.pagination-custom__item.d-none.d-sm-block
+                span.page-link.pagination-custom__link
+                  span(aria-hidden="true").pagination-custom__double-arrow-left
+                  span.sr-only Previous
+            li.page-item.disabled.pagination-custom__item.d-none.d-sm-block
+              span.page-link.pagination-custom__link
+                span(aria-hidden="true").pagination-custom__arrow-left
+                span.sr-only Previous
+            li.page-item.pagination-custom__item
+              a.page-link(href='#').pagination-custom__link 1
+            li.page-item.pagination-custom__item
+              a.page-link(href='#').pagination-custom__link 2
+            li.page-item.active.pagination-custom__item.pagination-custom__item--active
+              span.page-link.pagination-custom__link
+                | 3
+                span.sr-only (current)
+            li.page-item.pagination-custom__item
+              a.page-link(href='#').pagination-custom__link 4
+            li.page-item.pagination-custom__item
+              a.page-link(href='#').pagination-custom__link 5
+            li.page-item.pagination-custom__item.d-none.d-sm-block
+              a.page-link(href='#').pagination-custom__link.pagination-custom__link--arrow
+                span(aria-hidden="true").pagination-custom__arrow-right
+                span.sr-only Next
+            li.page-item.pagination-custom__item.d-none.d-sm-block
+              a.page-link(href='#').pagination-custom__link.pagination-custom__link--arrow
+                span(aria-hidden="true").pagination-custom__double-arrow-right
+                span.sr-only Next

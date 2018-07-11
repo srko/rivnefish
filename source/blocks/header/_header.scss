@@ -1,0 +1,101 @@
+.header {
+  background: #30344f; 
+
+  &--image {
+    background: #30344f url('../images/header-back-image.png');
+    background-blend-mode: soft-light;
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: center center; 
+    
+    height: 100%;
+  }
+}
+
+.main-title {
+  font-size: 60px;
+  font-weight: 600;
+  font-family: $open-sans;
+  color: rgb(223, 223, 224);
+  // line-height: 1.667;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px; 
+
+  @include breakpoint(xxs) {
+    font-size: 36px;
+  }
+
+  &--orange {
+    color: #ffb400;
+    display: inline;
+  }
+}
+
+.secondary-title {
+  font-size: 48px;
+  font-family: $open-sans;
+  font-weight: 100;
+  color: rgb(255, 254, 254);
+  // line-height: 2.083;
+  text-align: center;
+  
+  margin-bottom: 50px; 
+
+  @include breakpoint(xxs) {
+    font-size: 24px;
+  }
+}
+
+.header-icon {
+  background: url('../images/map-icon.png') no-repeat;
+  // display: inline-block;
+  position: relative;
+  height: 187px;
+  width: 163px;
+  transition: all 0.4s ease-in;
+
+  margin-bottom: 50px; 
+
+  filter: drop-shadow(0px 0px 8px rgba(#9098cf, 0));
+
+  // border: 1px solid pink;
+
+  &::before {
+    content: url('../images/map-icon__arrow.png');
+    width: 36px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: -60px;
+    transform: rotateY(180deg);
+    transition: all 0.3s ease-in;
+  }
+
+  &::after {
+    content: url('../images/map-icon__arrow.png');
+    width: 36px;
+    height: 42px;
+    display: block;
+    position: absolute;
+    top: 35%;
+    right: -58px;
+    transition: all 0.3s ease-in;
+  }
+
+  &:hover {
+    filter: drop-shadow(0px 0px 8px rgba(#9098cf, 0.8));
+    transition: all 0.2s ease-out;
+
+    &::before {
+      left: -50px;
+      transition: all 0.2s ease-out;
+    }
+
+    &::after {
+      right: -48px;
+      transition: all 0.2s ease-out;
+    }
+  }
+}

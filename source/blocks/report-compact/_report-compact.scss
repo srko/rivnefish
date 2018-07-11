@@ -1,0 +1,221 @@
+.report-compact {
+    border-bottom: 2px solid rgb(234, 237, 242);
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    &__date {
+        font-size: 16px;
+        font-family: $open-sans;
+        color: rgb(150, 150, 150);
+        line-height: 2.625;
+        text-align: left;
+        display: inline;
+        font-weight: 600;
+        transition: all ease-in-out 0.5s;
+        border-bottom: 1px solid rgba(150, 150, 150, 0);
+        padding-bottom: 1px;
+        &:hover {
+            color: rgb(100, 100, 100);
+            border-bottom: 1px solid rgba(100, 100, 100, 0.25);
+            text-decoration: none;
+            padding-bottom: 0px;
+            transition: all ease-in-out 0.3s;
+        } 
+    }
+    &__separator {
+        background: rgb(150, 150, 150);
+        height: 12px;
+        width: 2px;
+        display: inline-block;
+        margin: 0 5px;
+    }
+    &__name {
+        font-size: 16px;
+        font-family: $open-sans;
+        color: rgb(140, 192, 82);
+        line-height: 2.625;
+        text-align: left;
+        display: inline;
+        font-weight: 600;
+        margin-left: 4px;
+        transition: all ease-in-out 0.5s;
+        border-bottom: 1px solid rgba(150, 150, 150, 0);
+        padding-bottom: 1px;
+        &:hover {
+            color: rgb(143, 216, 59);
+            border-bottom: 1px solid rgba(143, 216, 59, 0.25);
+            text-decoration: none;
+            padding-bottom: 0px;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+    &__comments {
+        @include breakpoint(xs) { 
+            display: none;
+        }
+        &::before {
+            content: "💬";
+            color: transparent;
+            text-shadow: 0 0 0 #ffb400;
+            padding: 0 5px 1px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 1);
+            transition: all ease-in-out 0.5s; // transition-delay: 0.5s;
+        }
+        font-size: 15px;
+        font-weight: 600;
+        font-family:$open-sans;
+        color: rgb(150, 150, 150);
+        line-height: 2.8;
+        text-align: right;
+        transition: all ease-in-out 0.5s;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        padding-bottom: 1px;
+        &:hover {
+            color: rgb(150, 150, 150);
+            border-bottom: 1px solid rgba(150, 150, 150, 0.25);
+            text-decoration: none;
+            padding-bottom: 0px;
+            transition: all ease-in-out 0.3s;
+            &::before {
+                border-bottom: 1px solid rgba(255, 255, 255, 1);
+                transition: all ease-in-out 0.3s;
+                padding-bottom: 0px;
+            }
+        }
+    }
+    &__title {
+        font-size: 30px;
+        font-family: $open-sans;
+        color: rgb(74, 74, 74);
+        line-height: 1.4;
+        text-align: left;
+        margin: 5px 0 20px;
+    }
+    &__title-link {
+        color: inherit;
+        transition: all ease-in-out 0.5s;
+        border-bottom: 1px solid rgba(150, 150, 150, 0);
+        padding-bottom: 1px;
+        &:hover {
+            color: rgb(150, 150, 150);
+            border-bottom: 1px solid rgba(150, 150, 150, 0.25);
+            text-decoration: none;
+            padding-bottom: 0px;
+            transition: all ease-in-out 0.3s;
+        }
+    }
+    &__image {
+        border-radius: 5px;
+        background-color: rgb(121, 140, 172);
+        max-width: 360px;
+        max-height: 270px;
+        width: 100%;
+ 
+
+        @include breakpoint(sm) {  
+            max-width: none;
+            max-height: none;
+        }
+    }
+    &__data {
+        background: #f9fafb;
+        width: 100%;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 16px;
+        font-family: $open-sans;
+        color: rgb(74, 74, 74);
+        line-height: 2;
+        text-align: left;
+
+        table {
+            table-layout: fixed;
+              tr { 
+                th {
+                    width: 250px;
+
+                    @include breakpoint(md) {
+                        width: 40%; 
+                    }
+
+                    @include breakpoint(xxs) {
+                        width: 35%; 
+                        font-size: 14px; 
+                    }
+                }
+                td {}
+            }
+        }
+    }
+    &__star {
+        font-size: 30px;
+        line-height: 1;
+        color: transparent;
+        text-shadow: 0 0 0 #ffb400;
+        word-spacing: -5px;
+        &--grey {
+            text-shadow: 0 0 0 #d4d9de;
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &__fishes {
+        // height: 70px;
+
+        @include breakpoint(md) {
+        }
+
+        @include breakpoint(xxs) {
+            display: none;
+        }
+    }
+    &__fish {
+        margin: 20px 15px 10px 0;
+        color: transparent;
+        box-shadow: 0 0 0 #ffb400;
+
+        @include breakpoint(md) {
+            margin: 20px 10px 5px 0;
+        }
+    }
+    &__text {
+        font-size: 15px;
+        font-family: $open-sans;
+        color: rgb(142, 142, 142);
+        line-height: 1.8;
+        text-align: left;
+
+        // @include breakpoint(sm) {
+        //     margin: 15px 0 0 0;
+        // } 
+    }
+    &__read-whole {
+        font-size: 16px;
+        font-family: $open-sans;
+        font-weight: 600;
+        color: rgb(140, 192, 82);
+        text-align: left;
+        margin-top: 15px;
+        display: inline-block;
+        transition: all ease-in-out 0.5s;
+        border-bottom: 1px solid rgba(150, 150, 150, 0);
+        padding-bottom: 1px;
+        &:hover {
+            color: rgb(143, 216, 59);
+            border-bottom: 1px solid rgba(143, 216, 59, 0.25);
+            text-decoration: none;
+            padding-bottom: 0px;
+            transition: all ease-in-out 0.3s;
+            margin-bottom: 1px;
+        }
+        &::after {
+            content: url('../images/read-whole-icon.png');
+            margin-left: 5px;
+            width: 26px;
+            height: 16px;
+            position: relative;
+            top: 3px;
+    
+        }
+    }
+}

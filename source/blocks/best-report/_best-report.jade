@@ -1,0 +1,17 @@
+#best-report.best-report
+  .container
+    .row.justify-content-center
+      .col
+        img(src="./images/best-report-icon.png", alt="").best-report__image
+    .row.justify-content-center
+      .col
+        h1.text-center.best-report__title Найкращі звіти
+    .row.justify-content-center
+      .col-md.col-lg-4
+        include ../report-card/_report-card-1.jade
+      .col-md.col-lg-4
+        include ../report-card/_report-card-2.jade
+      .col-md.col-lg-4
+        include ../report-card/_report-card-3.jade 
+    .row.justify-content-center
+      button(type="submit", ).btn.btn-success.btn-lg.best-report__button Всі звіти

@@ -1,0 +1,42 @@
+// $mobile: '(max-width: 320px)';
+// $phone: '(max-width: 480px)';
+// $smart: '(max-width: 575.98px)';
+// $tablet: '(max-width: 767.98px)';
+// $laptop: '(max-width: 991.98px)';
+// $desktop: '(max-width: 1199.98px)';
+
+// @mixin respond-to($media) {
+//   @media only screen and #{$media} {
+//     @content;
+//   }
+// }
+
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  @if $point == xl {
+    @media (min-width: 1200px) { @content ; }
+ }
+  @else if $point == lg {
+    @media (max-width: 1199.98px) { @content ; }
+ } 
+   @else if $point == md {
+    @media (max-width: 991.98px) { @content ; }
+ }
+  @else if $point == sm {
+    @media (max-width: 767.98px)  { @content ; }
+ }
+ @else if $point == xs {
+    @media (max-width: 575.98px)  { @content ; } 
+ }
+ @else if $point == xxs {
+  @media (max-width: 320px)  { @content ; }
+}
+ @else {
+  @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  @media only screen and (max-width: #{$point}px) { @content; }
+}
+}

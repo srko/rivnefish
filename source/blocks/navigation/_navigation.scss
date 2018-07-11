@@ -1,0 +1,92 @@
+.navbar-custom {
+  border-bottom: 2px solid rgb(79, 81, 104);
+  // margin-bottom: 20px;
+}
+
+.nav-custom {
+
+  @include breakpoint(md) {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint(xs) {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint(xxs) {
+    flex-direction: column;
+    margin-bottom: 0; 
+  }
+
+  &__item { 
+    color: rgb(223, 223, 224);
+    font-family: $open-sans;
+    font-size: 16px;
+    text-align: left;
+
+    @include breakpoint(xxs) {
+      font-size: 24px;
+      text-align: center;
+    }
+    @include breakpoint(xs) { 
+
+    } 
+  }
+
+  &__link {
+    border-bottom: 1px solid rgba(255, 180, 0, 0);
+    color: inherit;
+    margin-right: 40px;
+    margin-top: 10px;
+    padding: 0 0 5px !important;
+    transition: border-bottom 0.5s ease-in;
+
+    &:hover {
+      color: inherit;
+      border-bottom: 1px solid rgb(255, 180, 0);
+      transition: border-bottom 0.3s ease-out;
+    }
+
+    @include breakpoint(xxs) {
+      margin-right: 0;
+    }
+  }
+}
+
+// .navbar-toggler-icon {
+//   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+// }
+
+.form-inline {
+
+  @include breakpoint(xl) { 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+
+  @include breakpoint(md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  @include breakpoint(xxs) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // border-top: 2px solid rgb(79, 81, 104);
+    padding-top: 10px;
+  }
+}

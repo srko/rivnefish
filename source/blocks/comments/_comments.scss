@@ -1,0 +1,152 @@
+.comments {
+    &__leave-comment {
+        display: flex;
+        align-items: center;
+        margin-bottom: 60px;
+        &-image {
+            width: 69px;
+            height: 69px;
+            border-radius: 50%;
+            margin-right: 30px;
+
+            @include breakpoint(xxs) {
+                width: 39px;
+                height: 39px;
+                display: none;
+            }
+        }
+        &-text {
+            border: none;
+            width: 100%;
+            border-top: 2px solid rgb(234, 237, 242);
+            border-bottom: 2px solid rgb(234, 237, 242);
+            font-size: 17px;
+            font-family: $open-sans;
+            color: rgb(142, 142, 142);
+            line-height: 2.471;
+            text-align: left;
+            &::-moz-placeholder,
+            &::-webkit-input-placeholder,
+            &:-ms-input-placeholder {}
+        }
+    }
+    &__comment-block {
+        &-title {
+            font-size: 24px;
+            font-family: $open-sans;
+            color: rgb(74, 74, 74);
+            line-height: 1.75;
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        &-show-more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            // border-top: 2px solid rgb(234, 237, 242); 
+            font-size: 17px;
+            font-family: $open-sans;
+            color: rgb(142, 142, 142);
+            line-height: 2.059;
+            text-align: left;
+            background: #f4f6f8;
+            width: 100%;
+            cursor: pointer; 
+            margin-bottom: 40px; 
+            
+
+            &-icon {
+                background: url(../images/more-comments-arrow.png);
+                width: 18px;
+                height: 15px;
+                margin: 0 0 0 15px;
+                top: 1px;
+                position: relative;
+            }
+     
+              
+
+        }
+    }
+    &__comment-list {}
+    &__comment {
+        display: flex;
+        border-bottom: 2px solid rgb(234, 237, 242);
+        margin-bottom: 25px;
+
+        &:nth-child(4) {
+            margin-bottom: 0;
+        }
+        &-image {
+            width: 69px;
+            height: 69px;
+            border-radius: 50%;
+            margin: 0 25px 0 0;
+
+            @include breakpoint(xxs) {
+                width: 39px;
+                height: 39px;
+                display: none;
+            }
+        }
+        &-body {
+            margin-bottom: 10px;
+
+        }
+        &-name {
+            font-size: 18px;
+            font-family: $open-sans;
+            color: rgb(255, 180, 0);
+            // line-height: 2.333;
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        &-text {
+            font-size: 15px;
+            font-family: $open-sans;
+            color: rgb(142, 142, 142);
+            line-height: 2;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        &-date {
+            font-size: 16px;
+            font-family: $open-sans;
+            font-weight: 600;
+            color: rgb(150, 150, 150);
+            line-height: 2.625;
+            text-align: left;
+            display: inline-block;
+        }
+        &-separator {
+            background: rgb(150, 150, 150);
+            height: 12px;
+            width: 2px;
+            display: inline-block;
+            margin: 0 5px 0 5px;
+        }
+        &-answer {
+            font-size: 16px;
+            font-family: $open-sans;
+            color: rgb(140, 192, 82);
+            line-height: 2.625;
+            text-align: left;
+            display: inline;
+            font-weight: 600;
+            margin-left: 4px;
+            transition: all ease-in-out 0.5s;
+            border-bottom: 1px solid rgba(150, 150, 150, 0);
+            padding-bottom: 1px;
+            &:hover {
+                color: rgb(143, 216, 59);
+                border-bottom: 1px solid rgba(143, 216, 59, 0.25);
+                text-decoration: none;
+                padding-bottom: 0px;
+                transition: all ease-in-out 0.3s;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.reports {
+    &__icon {
+        margin: 40px 0 30px 0;
+        
+    }
+    &__title {
+        font-size: 36px;
+        font-family: $open-sans;
+        color: rgb(74, 74, 74);
+        text-transform: uppercase; // line-height: 2.778;
+        text-align: center;
+        margin-bottom: 60px;
+        
+    }
+}
